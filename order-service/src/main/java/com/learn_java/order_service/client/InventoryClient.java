@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.lang.reflect.Method;
 
-@FeignClient(value = "inventory", url = "http://localhost:8082")
+@FeignClient(value = "inventory", url = "${inventory.url}")
 public interface InventoryClient {
-    // @RequestMapping(method = RequestMethod.GET, value = "/api/inventory")
     @GetMapping("/api/inventory")
     boolean isInStock(@RequestParam String skuCode, @RequestParam Integer quantity);
 }

@@ -5,11 +5,13 @@ import com.learn_java.order_service.dto.OrderRequest;
 import com.learn_java.order_service.model.Order;
 import com.learn_java.order_service.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class OrderService {
